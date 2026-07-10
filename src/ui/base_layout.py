@@ -1,5 +1,5 @@
 import streamlit as st
-
+# from src.ui.styles import 
 
 def style_background_home():
 
@@ -92,21 +92,6 @@ def style_home_portal_cards():
                 line-height: 1 !important;
             }
 
-            .home-footer{
-                visibility: visible !important;
-                margin: 2.5rem auto 0 auto !important;
-                padding: 1rem 0 0.5rem 0 !important;
-                text-align: center !important;
-            }
-
-            .home-footer p{
-                color: #E0E3FF !important;
-                font-family: 'Outfit', sans-serif !important;
-                font-size: 0.95rem !important;
-                font-weight: 600 !important;
-                margin: 0 !important;
-            }
-
             @media (max-width: 640px){
                 .portal-grid{
                     flex-direction: column !important;
@@ -148,9 +133,118 @@ def style_background_dashboard():
                 padding:2.5rem !important;
                 border-radius: 5rem !important;
                 }
+
+            h2,
+            h3{
+                color: #202333 !important;
+            }
+
+            div[data-testid="stWidgetLabel"] label,
+            div[data-testid="stWidgetLabel"] p,
+            div[data-testid="stTextInput"] label,
+            div[data-testid="stTextInput"] label p,
+            div[data-testid="stTextInput"] label div,
+            div[data-testid="stCameraInput"] label,
+            div[data-testid="stCameraInput"] label p,
+            div[data-testid="stCameraInput"] label div,
+            div[data-testid="stAudioInput"] label,
+            div[data-testid="stAudioInput"] label p,
+            div[data-testid="stAudioInput"] label div{
+                color: #202333 !important;
+            }
+
+            div[data-baseweb="input"]{
+                background-color: #ffffff !important;
+            }
+
+            div[data-baseweb="input"] input{
+                background-color: #ffffff !important;
+                color: #202333 !important;
+                caret-color: #202333 !important;
+            }
+
+            div[data-baseweb="input"] input::placeholder{
+                color: #5F6475 !important;
+                opacity: 1 !important;
+            }
+
+            div[data-testid="stDialog"]{
+                color: #ffffff !important;
+            }
+
+            div[data-testid="stDialog"] h1,
+            div[data-testid="stDialog"] h2,
+            div[data-testid="stDialog"] h3,
+            div[data-testid="stDialog"] p,
+            div[data-testid="stDialog"] span,
+            div[data-testid="stDialog"] label,
+            div[data-testid="stDialog"] div[data-testid="stMarkdownContainer"],
+            div[data-testid="stDialog"] div[data-testid="stWidgetLabel"] p,
+            div[data-testid="stDialog"] div[data-testid="stTextInput"] label p{
+                color: #ffffff !important;
+            }
+
+            div[data-testid="stDialog"] div[data-testid="column"]{
+                background-color: transparent !important;
+                padding: 0 !important;
+                border-radius: 0 !important;
+            }
+
+            div[data-testid="stDialog"] div[data-testid="stCodeBlock"],
+            div[data-testid="stDialog"] pre{
+                background-color: #171C28 !important;
+                color: #ffffff !important;
+                border-radius: 0.75rem !important;
+            }
+
+            div[data-testid="stDialog"] div[data-testid="stCaptionContainer"] p{
+                color: #D8DCF5 !important;
+            }
+
+            div[data-testid="stDialog"] button[aria-label="Close"]{
+                min-width: 5rem !important;
+                height: 2.2rem !important;
+                padding: 0 1rem !important;
+                border-radius: 1.5rem !important;
+                background: #5865F2 !important;
+                color: #ffffff !important;
+                font-family: 'Outfit', sans-serif !important;
+                font-size: 0 !important;
+                font-weight: 800 !important;
+                line-height: 1 !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 0.35rem !important;
+            }
+
+            div[data-testid="stDialog"] button[aria-label="Close"]::before{
+                content: "Back" !important;
+                color: #ffffff !important;
+                font-size: 0.9rem !important;
+            }
+
+            div[data-testid="stDialog"] button[aria-label="Close"] svg{
+                display: none !important;
+            }
+
+            hr{
+                border: none !important;
+                border-top: 2px solid rgba(32, 35, 51, 0.18) !important;
+                margin: 1.9rem auto 1.6rem auto !important;
+            }
         </style>
     
     """, unsafe_allow_html=True)
+    st.markdown("""
+        <style>
+        /* Make spinner/status text dark */
+        [data-testid="stStatus"] * ,
+        [data-testid="stSpinner"] * {
+            color: #202333 !important;
+        }
+        </style>
+        """, unsafe_allow_html=True)
 
 
 
@@ -222,6 +316,21 @@ def style_base_layout():
 
                 button:hover{
                     transform:scale(1.05)
+                }
+
+                .home-footer{
+                    visibility: visible !important;
+                    margin: 2.5rem auto 0 auto !important;
+                    padding: 1rem 0 0.5rem 0 !important;
+                    text-align: center !important;
+                }
+
+                .home-footer p{
+                    color: #202333 !important;
+                    font-family: 'Outfit', sans-serif !important;
+                    font-size: 0.95rem !important;
+                    font-weight: 600 !important;
+                    margin: 0 !important;
                 }
 
 
