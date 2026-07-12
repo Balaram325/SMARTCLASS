@@ -6,7 +6,8 @@ pandas
 
 scikit-learn
 dlib-bin
-git+https://github.com/ageitgey/face_recognition_models
+# git+https://github.com/ageitgey/face_recognition_models
+face-recognition-models==0.3.0
 
 supabase
 bcrypt
