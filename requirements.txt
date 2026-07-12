@@ -6,8 +6,8 @@ pandas
 
 scikit-learn
 dlib-bin
-# git+https://github.com/ageitgey/face_recognition_models
-face-recognition-models==0.3.0
+git+https://github.com/ageitgey/face_recognition_models
+setuptools<70.0.0
 
 supabase
 bcrypt
@@ -20,6 +20,8 @@ numba==0.65.1
 llvmlite==0.47.0
 resemblyzer==0.1.4
 
+# git+https://github.com/ageitgey/face_recognition_models
+# face-recognition-models==0.3.0
 
 
 
@@ -31,11 +33,9 @@ resemblyzer==0.1.4
 # # face recognition
 # scikit-learn
 # dlib-bin
-# git+https://github.com/ageitgey/face_recognition_models
-# setuptools<70.0.0
 
 
-# supabase
+# supabasess
 # bcrypt
 
 # segno
