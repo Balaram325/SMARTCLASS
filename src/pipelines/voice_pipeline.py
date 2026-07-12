@@ -8,7 +8,7 @@ import streamlit as st
 # apply_all_styles()
 
 @st.cache_resource
-def load_voice_encoder():git add src/pipelines/voice_pipeline.py
+def load_voice_encoder():
     return VoiceEncoder()
 
 
