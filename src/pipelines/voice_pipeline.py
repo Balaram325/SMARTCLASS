@@ -8,7 +8,7 @@ import streamlit as st
 # apply_all_styles()
 
 @st.cache_resource
-def load_voice_encoder():
+def load_voice_encoder():git add src/pipelines/voice_pipeline.py
     return VoiceEncoder()
 
 
@@ -21,7 +21,7 @@ def get_voice_embedding(audio_bytes):
         embedding = encoder.embed_utterance(wav)
         return embedding.tolist()
     except Exception as e:
-        st.error("Voice recog error")
+        st.error(f"Voice recog error: {e}")
         return None
     
 def identify_speaker(new_embedding, candidates_dict, threshold=0.65):
