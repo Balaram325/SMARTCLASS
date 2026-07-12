@@ -233,6 +233,38 @@ def style_background_dashboard():
                 border-top: 2px solid rgba(32, 35, 51, 0.18) !important;
                 margin: 1.9rem auto 1.6rem auto !important;
             }
+            div[data-baseweb="select"] > div {
+            background: #FFFFFF !important;
+            color: #202333 !important;
+            border: 2px solid #5865F2 !important;
+            border-radius: 14px !important;
+            min-height: 50px !important;
+            }
+
+            div[data-baseweb="select"] input {
+                color: #202333 !important;
+            }
+
+            div[data-baseweb="select"] span {
+                color: #202333 !important;
+                font-weight: 600 !important;
+            }
+
+            /* Dropdown */
+            div[data-baseweb="popover"] {
+                background: #FFFFFF !important;
+            }
+
+            div[data-baseweb="menu"] {
+                background: #FFFFFF !important;
+                border-radius: 12px !important;
+            }
+            div[data-testid="stSelectbox"] label,
+            div[data-testid="stSelectbox"] label p {
+                color: #202333 !important;
+                font-weight: 700 !important;
+                font-size: 1rem !important;
+            }
         </style>
     
     """, unsafe_allow_html=True)

@@ -21,8 +21,8 @@ def voice_attendance_dialog(selected_subject_id):
                 st.warning('No students enrolled in this course')
                 return
             candidates_dict = {
-                s['students']['student_id'] : s['students']['voice_embdding']
-                for s in enrolled_students if s['students'].get('voice_emgedding')
+                s['students']['student_id'] : s['students']['voice_embedding']
+                for s in enrolled_students if s['students'].get('voice_embedding')
 
             }
 
@@ -43,7 +43,7 @@ def voice_attendance_dialog(selected_subject_id):
                 results.append({
                     "Name": student['name'],
                     "ID": student['student_id'],
-                    "Source": ", ".join(score) if is_present else "_",
+                    "Source": f"Score: {score:.2f}" if is_present else "_",
                     "Status": "✅ Present"if is_present else "❌ Absent"
                 })
 
