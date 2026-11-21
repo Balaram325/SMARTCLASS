@@ -10,3 +10,6 @@ venv/
 
 
 dist/
+# Private, consented recognition evaluation labels
+evaluation/attempts.csv
+evaluation/results.json
